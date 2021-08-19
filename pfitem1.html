@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kishore Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        
+    <!-- Update these with your own fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/devjane.png" alt="">
+        </div>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav_list">
+                <li class="nav_item "><a class="nav_link" href="index.html">Home</a></li>
+                <li class="nav_item"><a class="nav_link" href="index.html#about">About Me</a></li>
+                <li class="nav_item nav_link"><a class="nav_link" href="index.html#work" >My Work</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Intro-->
+    <section class="intro" id="home">
+        <h1 class="section_title section_title-intro">Digital<strong>Morse Code System</strong></h1>
+        <p class="section_subtitle section_subtitle-intro">using Verilog HDL</p>
+        <img src="img/trans.jpg" alt="Kishore on Campus" class="intro_img pf-intro_img">
+    </section>
+
+    <div class="pf-item">
+        <h2 class = "proj-subhead">What is Morse Code?</h2>
+        <p>Morse Code is a method used in telecommunication to encode text characters as
+            standardized sequences of two different signal durations, called dots and dashes. The
+            International Morse Code encodes the 26 English letters A through Z, and the numbers 0 to 9.
+            There is no distinction between upper-case and lower-case letters. Each Morse code symbol is
+            formed by a sequence of dots and dashes.</p>
+            <p>The dot duration is the basic unit of time measurement in Morse code transmission. The
+                duration of a dash is three times the duration of a dot. Each dot or dash within a character is
+                followed by period of signal absence, called a space, equal to the dot duration. The letters of a
+                word are separated by a space of duration equal to three dots, and the words are separated by a
+                space equal to seven dots. To increase the efficiency of encoding, Morse code was designed so
+                that the length of each symbol is approximately inverse to the frequency of occurrence of the
+                character that it represents in text of the English language. Thus, the most common letter in
+                English, the letter ‘E’, has the shortest code: a single dot. Because the Morse code elements are
+                specified by proportion rather than specific time durations, the code is usually transmitted at
+                the highest rate that the receiver is capable of decoding. The Morse code transmission rate
+                (speed) is specified in groups per minute, commonly referred to as words per minute.</p>
+
+        <img src="img/imc.png" alt="">
+        <h2 class = "proj-subhead">How This Project is Done</h2>
+        <p>The project is designed to implement a system that translates the Morse Code to the
+            English Alphabet(A-Z) and numbers (0-9). The Morse Code is given as the input to the FPGA
+            through a single KEY. This KEY is configured to act as the sole input signal because the
+            intention is to make this system similar to the traditional telegraph which has only one signal
+            key to transmit electrical pulses. The given input code is translated or decoded into the English
+            Alphabet and numbers. This conversion is done by the FPGA board with the help of the Verilog
+            code dumped into it.</p>
+        <p>The design consists of three modules. The first module takes the input Morse Signal
+            and recognizes dots, dashes, space between the letters, space between the words, and feeds
+            them to the second module. The second module, which is the top-level block, uses the first and
+            third modules to decode the given Morse signal and display the decoded signal on the LCD
+            screen, respectively. The third module is to encode the output of the second module so that it
+            can be displayed on the LCD Screen. The third module is not necessary when the project is
+            simulated with a ‘testbench’; it is only required during the hardware implementation of the
+            project.</p>
+
+            <img src="img/fsm.png" alt="">
+    </div>
+
+    <!--Footer -->
+    <footer>
+        <a href="#" class="footer_link"></a>
+        <ul class="social-list">
+            <li class="social-list_item"> 
+                <a class="social-list_link" href="http://github.com">
+                    <i class="fab fa-github"></i></a></li>
+            <li class="social-list_item"> 
+                <a class="social-list_link" href="http://linkedin.com">
+                    <i class="fab fa-linkedin"></i>
+                </a></li>
+            <li class="social-list_item"> 
+                <a class="social-list_link" href="http://facebook.com">
+                    <i class="fab fa-facebook"></i>
+                </a></li> 
+                 
+        </ul>
+    </footer>
+
+    <script src="jsc.js"></script>
+
+</body>
+</html>
